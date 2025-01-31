@@ -1,0 +1,30 @@
+<app-upload (uploadSuccess)="onUploadSuccess()"></app-upload>
+<div class="total-container">
+    <span>Total: {{ total | currency }}</span>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Transaction Type</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>CPF</th>
+                <th>Card</th>
+                <th>Owner</th>
+                <th>Store</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>{{ transaction.type }}</td>
+                <td>{{ transaction.date }}</td>
+                <td>{{ transaction.value }}</td>
+                <td>{{ transaction.cpf }}</td>
+                <td>{{ transaction.card }}</td>
+                <td>{{ transaction.storeOwner }}</td>
+                <td>{{ transaction.storeName }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
