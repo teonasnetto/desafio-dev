@@ -12,15 +12,15 @@ export class TransactionListComponent implements OnInit {
   total: number = 0;
 
   private transactionTypeSignMap: { [key: string]: number } = {
-    'Débito': 1,
-    'Boleto': -1,
-    'Financiamento': -1,
-    'Crédito': 1,
-    'Recebimento Empréstimo': 1,
-    'Vendas': 1,
-    'Recebimento TED': 1,
-    'Recebimento DOC': 1,
-    'Aluguel': -1
+    'DEBITO': 1,
+    'BOLETO': -1,
+    'FINANCIAMENTO': -1,
+    'CREDITO': 1,
+    'RECEBIMENTO_EMPRESTIMO': 1,
+    'VENDAS': 1,
+    'RECEBIMENTO_TED': 1,
+    'RECEBIMENTO_DOC': 1,
+    'ALUGUEL': -1
   };
 
   constructor(private transactionService: TransactionService) {}
