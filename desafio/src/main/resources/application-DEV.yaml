@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: desafio
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nome_do_banco
+    username: seu_usuario
+    password: sua_senha
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
