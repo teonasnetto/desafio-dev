@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum TransactionType {
-    DEBIT(1, "Débito", "Entrada", "+"),
+    DEBITO(1, "Débito", "Entrada", "+"),
     BOLETO(2, "Boleto", "Saída", "-"),
     FINANCIAMENTO(3, "Financiamento", "Saída", "-"),
     CREDITO(4, "Crédito", "Entrada", "+"),
