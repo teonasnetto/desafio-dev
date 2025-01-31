@@ -1,3 +1,18 @@
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Maven](https://img.shields.io/badge/Maven-3.9.6-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.8-brightgreen)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Quality Gate Status](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Maintainability Rating](https://img.shields.io/badge/Maintainability-A-brightgreen)
+![Reliability Rating](https://img.shields.io/badge/Reliability-A-brightgreen)
+![Security Rating](https://img.shields.io/badge/Security-A-brightgreen)
+
+
+<details>
+<summary>Desafio Proposto</summary>
+
 # Desafio programação - para vaga desenvolvedor
 
 Por favor leiam este documento do começo ao fim, com muita atenção.
@@ -46,7 +61,7 @@ Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https:
 | Data  | 2  | 9 | 8 | Data da ocorrência
 | Valor | 10 | 19 | 10 | Valor da movimentação. *Obs.* O valor encontrado no arquivo precisa ser divido por cem(valor / 100.00) para normalizá-lo.
 | CPF | 20 | 30 | 11 | CPF do beneficiário
-| Cartão | 31 | 42 | 12 | Cartão utilizado na transação 
+| Cartão | 31 | 42 | 12 | Cartão utilizado na transação
 | Hora  | 43 | 48 | 6 | Hora da ocorrência atendendo ao fuso de UTC-3
 | Dono da loja | 49 | 62 | 14 | Nome do representante da loja
 | Nome loja | 63 | 81 | 19 | Nome da loja
@@ -83,3 +98,65 @@ Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/da
 ---
 
 Boa sorte!
+</details>
+
+# Projeto Desafio
+
+## Tecnologias Utilizadas
+
+- **Java**: Linguagem de programação utilizada na aplicação.
+- **Spring Boot**: Framework para construção da aplicação.
+- **Maven**: Ferramenta de automação de build utilizada para gerenciar dependências e construir o projeto.
+- **PostgreSQL**: Banco de dados utilizado para armazenar os dados da aplicação.
+- **Docker**: Plataforma de containerização utilizada para executar a aplicação e o banco de dados.
+- **Angular**: Framework para construção da interface do usuário.
+
+## Pré-requisitos
+
+### No geral só precisa do docker e docker-compose para rodar, mas se quiser rodar localmente cada aplicação , precisa de:
+
+- **Java 17**: Certifique-se de ter o Java 17 instalado.
+- **Maven**: Certifique-se de que o Maven está instalado e configurado.
+- **Docker**: Instale o Docker para executar a aplicação em um container.
+- **Node.js e npm**: Certifique-se de ter o Node.js e o npm instalados para executar o Angular.
+
+## Iniciando o Projeto
+
+### Clonar o Repositório
+
+- Clone o repositório para a sua máquina local
+```sh
+git clone https://github.com/teonasnetto/desafio.git
+```
+- Navegue até a pasta do projeto
+```sh
+cd desafio
+```
+- Execute o comando `docker-compose up --build` para iniciar a aplicação
+```sh
+docker-compose up --build
+```
+- Acesse a aplicação em `http://localhost:80`
+- Acesse o Swagger em `http://localhost:8080/swagger-ui/index.html`
+- Json do swagger em `http://localhost:8080/v3/api-docs`
+- Health check em `http://localhost:8080/actuator/health`
+
+## Testando a Aplicação
+
+### Requisição de Exemplo
+
+Você pode usar o `curl` para testar a aplicação. Aqui está um exemplo de como fazer uma requisição GET:
+
+
+- **POST /api/transactions/upload**: Envia um arquivo CNAB para ser processado.
+
+```sh
+curl --location 'http://localhost:8080/api/transactions/upload' \
+--header 'Cookie: JSESSIONID=A2D49EB858413A9DB0BCD02F0F05E846' \
+--form 'file=@"file.txt"'
+```
+
+- **GET /api/transactions**: Retorna todas as transações processadas.
+```sh
+curl --location 'http://localhost:8080/api/transactions'
+```
