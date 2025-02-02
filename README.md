@@ -160,3 +160,11 @@ curl --location 'http://localhost:8080/api/transactions/upload' \
 ```sh
 curl --location 'http://localhost:8080/api/transactions'
 ```
+
+# imagens de exemplo
+
+## Sonarqube
+![Sonarqube](assets/sonarqube.jpg)
+
+## Swagger
+![swagger](assets/swagger.jpg)
