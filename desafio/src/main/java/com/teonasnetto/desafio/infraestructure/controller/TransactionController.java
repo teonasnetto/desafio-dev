@@ -3,6 +3,7 @@ package com.teonasnetto.desafio.infraestructure.controller;
 import com.teonasnetto.desafio.application.TransactionService;
 import com.teonasnetto.desafio.domain.model.Transaction;
 import com.teonasnetto.desafio.infraestructure.util.TransactionParser;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +19,11 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/transactions")
 public class TransactionController implements ITransactionControllerSwagger {
-    @Autowired
-    private TransactionService transactionService;
+
+    private final TransactionService transactionService;
 
     @PostMapping("/upload")
     @Transactional
