@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Quality Gate Status](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
-![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-97%25-brightgreen)
 ![Maintainability Rating](https://img.shields.io/badge/Maintainability-A-brightgreen)
 ![Reliability Rating](https://img.shields.io/badge/Reliability-A-brightgreen)
 ![Security Rating](https://img.shields.io/badge/Security-A-brightgreen)
