@@ -136,7 +136,7 @@ cd desafio
 ```sh
 docker-compose up --build
 ```
-- Acesse a aplicação em `http://localhost:80`
+- Acesse a aplicação em `http://localhost:8081`
 - Acesse o Swagger em `http://localhost:8080/swagger-ui/index.html`
 - Json do swagger em `http://localhost:8080/v3/api-docs`
 - Health check em `http://localhost:8080/actuator/health`
